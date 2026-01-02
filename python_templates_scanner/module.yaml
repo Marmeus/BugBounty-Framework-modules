@@ -1,0 +1,19 @@
+schema_version: 1
+name: python_templates_scanner
+type: EX
+tags: ["security", "vulnerability", "scanner", "python"]
+image: orchestrator/python_templates_scanner:latest
+pull_policy: never
+entrypoint: ["python3", "/app/runner.py"]
+timeout_seconds: -1
+resources:
+  memory: 2g
+  cpu_priority: 1.0
+input_type: service
+output_type: issue
+impact: medium
+io:
+  input_file: /task/input.json
+  output_file: /task/output.ndjson
+  errors_file: /task/errors.txt
+

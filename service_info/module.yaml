@@ -1,0 +1,19 @@
+schema_version: 1
+name: service_info
+type: IG
+tags: ["HTTPx", "Screenshot", "Open Ports"]
+image: orchestrator/service_info:latest
+pull_policy: never
+entrypoint: ["python3", "/app/runner.py"]
+timeout_seconds: -1
+resources:
+  memory: 512m
+  cpu_priority: 1.0
+input_type: domain
+output_type: service # domain|service|url|issue
+impact: low
+io:
+  input_file: /task/input.json
+  output_file: /task/output.ndjson
+  errors_file: /task/errors.txt
+

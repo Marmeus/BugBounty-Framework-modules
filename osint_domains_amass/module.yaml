@@ -1,0 +1,19 @@
+schema_version: 1
+name: osint_domains_amass
+type: IG
+tags: ["osint", "passive", "domains"]
+image: orchestrator/osint_domains_amass:latest
+pull_policy: never
+entrypoint: ["python3", "/app/runner.py"]
+timeout_seconds: -1
+resources:
+  memory: 512m
+  cpu_priority: 1.0
+input_type: domain
+output_type: domain # domain|service|url|issue
+impact: low
+io:
+  input_file: /task/input.json
+  output_file: /task/output.ndjson
+  errors_file: /task/errors.txt
+

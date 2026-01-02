@@ -1,0 +1,19 @@
+schema_version: 1
+name: url_gather_active
+type: IG
+tags: ["url", "gathering", "active"]
+image: orchestrator/url_gather_active:latest
+pull_policy: never
+entrypoint: ["python3", "-u", "/app/runner.py"]
+timeout_seconds: 3600
+resources:
+  memory: 30g
+  cpu_priority: 2.0
+input_type: service
+output_type: url # domain|service|url|issue
+impact: high
+io:
+  input_file: /task/input.json
+  output_file: /task/output.ndjson
+  errors_file: /task/errors.txt
+

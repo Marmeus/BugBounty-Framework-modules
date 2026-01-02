@@ -1,0 +1,19 @@
+schema_version: 1
+name: osint_urls_gau
+type: IG
+tags: ["url", "gathering", "passive", "osint"]
+image: orchestrator/osint_urls_gau:latest
+pull_policy: never
+entrypoint: ["python3", "-u", "/app/runner.py"]
+timeout_seconds: 3600
+resources:
+  memory: 5g
+  cpu_priority: 1.0
+input_type: domain,service
+output_type: url # domain|service|url|issue
+impact: low
+io:
+  input_file: /task/input.json
+  output_file: /task/output.ndjson
+  errors_file: /task/errors.txt
+

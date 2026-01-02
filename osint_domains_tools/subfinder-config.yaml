@@ -1,0 +1,53 @@
+# Subfinder Provider Configuration
+# This file configures API keys for various subdomain discovery sources
+# Format: Standard subfinder YAML configuration
+# 
+# For detailed configuration options, see:
+# https://github.com/projectdiscovery/subfinder
+
+# Example configuration (uncomment and fill in your API keys):
+# binaryedge:
+#   - [api_key_here]
+# 
+# censys:
+#   - [api_id_here]
+#   - [api_secret_here]
+# 
+# certspotter:
+#   - [api_key_here]
+# 
+# chaos:
+#   - [api_key_here]
+# 
+# dnsdb:
+#   - [api_key_here]
+# 
+# fofa:
+#   - [email_here]
+#   - [api_key_here]
+# 
+# github:
+#   - [github_token_here]
+# 
+# intelx:
+#   - [api_key_here]
+# 
+# passivetotal:
+#   - [username_here]
+#   - [api_key_here]
+# 
+# securitytrails:
+#   - [api_key_here]
+# 
+# shodan:
+#   - [api_key_here]
+# 
+# urlscan:
+#   - [api_key_here]
+# 
+# virustotal:
+#   - [api_key_here]
+# 
+# zoomeye:
+#   - [api_key_here]
+

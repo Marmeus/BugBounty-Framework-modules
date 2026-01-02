@@ -1,0 +1,19 @@
+schema_version: 1
+name: resolve_domains
+type: IG
+tags: ["dns", "resolution", "domains", "active"]
+image: orchestrator/resolve_domains:latest
+pull_policy: never
+entrypoint: ["python3", "/app/runner.py"]
+timeout_seconds: 1800
+resources:
+  memory: 1g
+  cpu_priority: 1.0
+input_type: domain
+output_type: domain # domain|service|url|issue
+impact: low
+io:
+  input_file: /task/input.json
+  output_file: /task/output.ndjson
+  errors_file: /task/errors.txt
+

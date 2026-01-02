@@ -1,0 +1,19 @@
+schema_version: 1
+name: dns_brute_force
+type: IG
+tags: ["domains", "brute-force","active"]
+image: orchestrator/dns_brute_force:latest
+pull_policy: never
+entrypoint: ["python3", "-u", "/app/runner.py"]
+timeout_seconds: 3600
+resources:
+  memory: 16g
+  cpu_priority: 2.0
+input_type: domain
+output_type: domain # domain|service|url|issue
+impact: high
+io:
+  input_file: /task/input.json
+  output_file: /task/output.ndjson
+  errors_file: /task/errors.txt
+

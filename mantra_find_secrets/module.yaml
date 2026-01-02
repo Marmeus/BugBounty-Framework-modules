@@ -1,0 +1,19 @@
+schema_version: 1
+name: mantra_find_secrets
+type: EX
+tags: ["secrets", "api-keys", "security", "exfiltration"]
+image: orchestrator/mantra_find_secrets:latest
+pull_policy: never
+entrypoint: ["python3", "-u", "/app/runner.py"]
+timeout_seconds: 3600
+resources:
+  memory: 1g
+  cpu_priority: 3.0
+input_type: url
+output_type: issue # domain|service|url|issue
+impact: high
+io:
+  input_file: /task/input.json
+  output_file: /task/output.ndjson
+  errors_file: /task/errors.txt
+

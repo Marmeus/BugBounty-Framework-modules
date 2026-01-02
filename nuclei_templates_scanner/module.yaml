@@ -1,0 +1,19 @@
+schema_version: 1
+name: nuclei_templates_scanner
+type: EX
+tags: ["vulnerability", "scanner", "nuclei", "active"]
+image: orchestrator/nuclei_templates_scanner:latest
+pull_policy: never
+entrypoint: ["python3", "-u", "/app/runner.py"]
+timeout_seconds: 7200
+resources:
+  memory: 4g
+  cpu_priority: 2.0
+input_type: url,service,domain
+output_type: issue # domain|service|url|issue
+impact: high
+io:
+  input_file: /task/input.json
+  output_file: /task/output.ndjson
+  errors_file: /task/errors.txt
+

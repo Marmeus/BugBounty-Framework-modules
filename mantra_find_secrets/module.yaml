@@ -2,7 +2,7 @@ schema_version: 1
 name: mantra_find_secrets
 type: EX
 tags: ["secrets", "api-keys", "security", "exfiltration"]
-image: orchestrator/mantra_find_secrets:latest
+image: worker/mantra_find_secrets:latest
 pull_policy: never
 entrypoint: ["python3", "-u", "/app/runner.py"]
 timeout_seconds: 3600

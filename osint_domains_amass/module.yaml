@@ -2,7 +2,7 @@ schema_version: 1
 name: osint_domains_amass
 type: IG
 tags: ["osint", "passive", "domains"]
-image: orchestrator/osint_domains_amass:latest
+image: worker/osint_domains_amass:latest
 pull_policy: never
 entrypoint: ["python3", "/app/runner.py"]
 timeout_seconds: -1

@@ -250,7 +250,7 @@ def main():
                 capture_output=True,
                 text=True,
                 shell=True,
-                timeout=None  # Use orchestrator timeout
+                timeout=None  # Use worker timeout
             )
             
             error = process_result.stderr

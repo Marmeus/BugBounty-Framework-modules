@@ -45,7 +45,7 @@ Modules are categorized into two types:
 
 ### Custom Image Registry
 
-By default, images are tagged with the `orchestrator` registry prefix. You can override this:
+By default, images are tagged with the `worker` registry prefix. You can override this:
 
 ```bash
 IMAGE_REGISTRY=myregistry ./build_modules.sh
@@ -136,7 +136,7 @@ schema_version: 1
 name: module_name
 type: IG|EX
 tags: ["tag1", "tag2"]
-image: orchestrator/module_name:latest
+image: worker/module_name:latest
 pull_policy: never
 entrypoint: ["python3", "/app/runner.py"]
 timeout_seconds: 3600

@@ -2,7 +2,7 @@ schema_version: 1
 name: service_info
 type: IG
 tags: ["HTTPx", "Screenshot", "Open Ports"]
-image: orchestrator/service_info:latest
+image: worker/service_info:latest
 pull_policy: never
 entrypoint: ["python3", "/app/runner.py"]
 timeout_seconds: -1

@@ -2,7 +2,7 @@ schema_version: 1
 name: url_gather_active
 type: IG
 tags: ["url", "gathering", "active"]
-image: orchestrator/url_gather_active:latest
+image: worker/url_gather_active:latest
 pull_policy: never
 entrypoint: ["python3", "-u", "/app/runner.py"]
 timeout_seconds: 3600

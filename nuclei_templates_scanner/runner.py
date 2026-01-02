@@ -162,7 +162,7 @@ def run_nuclei(targets_file: str, output_file: str):
             nuclei_cmd,
             capture_output=True,
             text=True,
-            timeout=None  # Use orchestrator timeout
+            timeout=None  # Use worker timeout
         )
         
         # Check for errors

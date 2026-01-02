@@ -2,7 +2,7 @@ schema_version: 1
 name: dns_brute_force
 type: IG
 tags: ["domains", "brute-force","active"]
-image: orchestrator/dns_brute_force:latest
+image: worker/dns_brute_force:latest
 pull_policy: never
 entrypoint: ["python3", "-u", "/app/runner.py"]
 timeout_seconds: 3600

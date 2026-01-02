@@ -104,7 +104,7 @@ def run_subfinder(domain, output_file):
             subfinder_cmd,
             capture_output=True,
             text=True,
-            timeout=None  # Use orchestrator timeout
+            timeout=None  # Use worker timeout
         )
         
         print(f"Subfinder result:\n{result.stdout}")
@@ -167,7 +167,7 @@ def run_assetfinder(domain):
             capture_output=True,
             text=True,
             env=env_vars,
-            timeout=None  # Use orchestrator timeout
+            timeout=None  # Use worker timeout
         )
         
         print(f"Assetfinder result:\n{result.stdout}")

@@ -2,7 +2,7 @@ schema_version: 1
 name: resolve_domains
 type: IG
 tags: ["dns", "resolution", "domains", "active"]
-image: orchestrator/resolve_domains:latest
+image: worker/resolve_domains:latest
 pull_policy: never
 entrypoint: ["python3", "/app/runner.py"]
 timeout_seconds: 1800

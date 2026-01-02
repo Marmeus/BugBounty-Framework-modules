@@ -2,7 +2,7 @@ schema_version: 1
 name: osint_domains_curl
 type: IG
 tags: ["osint", "passive", "domains"]
-image: orchestrator/osint_domains_curl:latest
+image: worker/osint_domains_curl:latest
 pull_policy: never
 entrypoint: ["python3","-u","/app/runner.py"]
 timeout_seconds: 600

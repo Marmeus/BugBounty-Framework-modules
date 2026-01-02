@@ -13,7 +13,7 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
-IMAGE_REGISTRY=${IMAGE_REGISTRY:-orchestrator}
+IMAGE_REGISTRY=${IMAGE_REGISTRY:-worker}
 SPECIFIC_MODULE=$1  # Optional: module name to build or -l flag
 
 # Check if -l flag is used to list available modules
